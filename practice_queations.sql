@@ -12,3 +12,5 @@ insert into employee(id,name,salary)values(1,"adam",25000),(2,"bob",30000),(3,"c
 select * from employee;
 
 
+
+
