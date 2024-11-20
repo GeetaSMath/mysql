@@ -39,6 +39,36 @@ update employee
 set age=25
 where id=104;
 
+create table student(student_id int primary key,name varchar(50));
+insert into student(student_id, name)values(101,"adam"),(102,"bob"),(103,"casey");
+select * from student;
 
+create table course(student_id int primary key,course varchar(50));
+insert into course(student_id,course)values(102,"english"),(105,"math"),(103,"science"),(107,"computer science");
+select * from course;
 
+#INNER JOIN
+select * from student as a
+inner join course as b
+on a.student_id=b.student_id;
 
+select * from student where student_id=103;
+
+#RIGHT JOIN 
+select * from student as a
+right join course as b 
+on a.student_id=b.student_id;
+
+#LEFT JOIN
+select * from student as a
+left join course as b
+on a.student_id=b.student_id;
+
+#union 
+select * from student as a
+right join course as b
+on a.student_id =b.student_id
+union
+select * from student as a
+left join course as b
+on a.student_id=b.student_id;
